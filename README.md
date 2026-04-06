@@ -5,8 +5,9 @@ A modern, responsive, and interactive finance dashboard built for the Zorvyn Fro
 ---
 
 ## 🔗 Live Demo
-
-*(You can add your Vercel or Netlify deployment link here later)*
+```
+*https://finance-dash-ochre.vercel.app/*
+```
 
 ---
 
