@@ -1,160 +1,94 @@
-# 💸 Finance Dashboard UI
+# Zorvyn Finance Dashboard UI 🚀
 
-A clean, responsive, and interactive **Finance Dashboard** built as part of the Zorvyn Frontend Developer Intern assignment.
-This project demonstrates strong fundamentals in **UI design, state management, and frontend architecture**.
+A modern, responsive, and interactive finance dashboard built for the Zorvyn Frontend Developer Intern assignment. This project focuses on clean UI/UX, effective state management, and intuitive data visualization.
 
 ---
 
 ## 🔗 Live Demo
 
-*(Add your Vercel deployment link here after hosting)*
+*(You can add your Vercel or Netlify deployment link here later)*
 
 ---
 
-## ✨ Features
+## ✨ Key Features
 
-### 📊 1. Dashboard Overview
+### 1. Dashboard Overview
 
-* **Summary Cards**
+* **Summary Cards:** Real-time calculation of Total Balance, Total Income, and Total Expenses.
+* **Visualizations:**
 
-  * Total Balance
-  * Total Income
-  * Total Expenses
-* **Spending Visualization**
-
-  * Simple visual bar representation of financial activity
-* **Dynamic Calculations**
-
-  * All values update automatically based on transactions
+  * A time-based **Line Chart** tracking the balance trend over time.
+  * A categorical **Pie Chart** breaking down expenses by category.
+* **Smart Insights:** Automatically analyzes transaction data to highlight the highest spending category and provides dynamic financial feedback.
 
 ---
 
-### 📄 2. Transactions Section
+### 2. Transaction Management
 
-* Displays:
-
-  * Date
-  * Category
-  * Amount
-  * Type (Income / Expense)
-* Features:
-
-  * 🔍 Search by category
-  * 📉 Filtered results in real-time
-  * 🧾 Graceful empty state handling
+* **Interactive Table:** View all transactions with formatted dates, categories, and color-coded amounts.
+* **Search & Filter:** Instantly filter transactions by description/category using the search bar, or filter by transaction type (Income vs. Expense).
+* **Add & Delete (Admin):** Simulate backend mutations by adding new transactions or deleting existing ones.
 
 ---
 
-### 🔐 3. Role-Based UI (Simulation)
+### 3. Role-Based UI (RBAC Simulation)
 
-* Toggle between roles:
-
-  * **Viewer**
-
-    * Can only view data
-  * **Admin**
-
-    * Can add transactions *(extendable)*
-* Demonstrates frontend RBAC logic without backend
+* Seamlessly toggle between **Viewer** and **Admin** roles via the top navigation bar.
+* **Viewer:** Read-only access to data and visualizations.
+* **Admin:** Unlocks the ability to add new transactions and delete records.
 
 ---
 
-### 📈 4. Insights Section
+### 4. Extra Enhancements 🌟
 
-* Automatically calculates:
-
-  * Highest spending category
-* Displays meaningful financial observation from data
-
----
-
-### 🧠 5. State Management
-
-* Managed using **React Context API**
-* Handles:
-
-  * Transactions data
-  * Search filters
-  * User role
-* Clean separation of logic and UI
+* **Dark Mode:** Fully integrated dark mode using Tailwind's `class` strategy. Toggleable via the header icon.
+* **Data Persistence:** Uses `localStorage` to save transactions, role selection, and theme preferences across browser refreshes.
+* **Responsive Design:** A fully responsive layout that adapts gracefully to mobile, tablet, and desktop screens.
 
 ---
 
-### 💾 6. Data Persistence
+## 🛠️ Tech Stack & Decisions
 
-* Uses **localStorage**
-* Saves:
-
-  * Transactions
-  * User role
-* Data remains after refresh
-
----
-
-### 📱 7. Responsive Design
-
-* Fully responsive layout:
-
-  * Mobile
-  * Tablet
-  * Desktop
-* Built using Tailwind utility classes
-
----
-
-## 🛠️ Tech Stack
-
-| Technology               | Purpose                            |
-| ------------------------ | ---------------------------------- |
-| **React (Vite)**         | Fast and modern frontend framework |
-| **Tailwind CSS v3.4.17** | Utility-first styling              |
-| **Context API**          | State management                   |
-| **JavaScript (ES6+)**    | Core logic                         |
-| **LocalStorage**         | Data persistence                   |
-
----
-
-## 📂 Folder Structure
-
-```
-src/
-│
-├── components/
-│   ├── Transaction.jsx
-│   └── DashboardOverview.jsx
-│
-├── store/
-│   └── useStore.js
-│
-├── App.jsx
-├── main.jsx
-└── index.css
-```
+* **Framework:** React via Vite - Chosen for its fast build times and optimized development server.
+* **Styling:** Tailwind CSS (v3.4.17) - Utility-first CSS for rapid, scalable, and responsive styling without leaving the markup.
+* **State Management:** Zustand - A small, fast, and scalable state-management solution with minimal boilerplate and easy persistence.
+* **Charts:** Recharts - A composable charting library built on React components for clean, responsive SVG charts.
+* **Icons & Utils:** lucide-react for iconography and date-fns for date formatting.
 
 ---
 
 ## 🚀 Getting Started
 
-### 1. Clone the repository
+Follow these instructions to get the project up and running on your local machine.
+
+### Prerequisites
+
+Make sure you have Node.js installed on your machine.
+
+---
+
+### Installation
+
+1. **Clone the repository**
 
 ```bash
 git clone https://github.com/Tiku57/FinanceDash.git
 cd FinanceDash
 ```
 
-### 2. Install dependencies
+2. **Install dependencies**
 
 ```bash
 npm install
 ```
 
-### 3. Run the project
+3. **Start the development server**
 
 ```bash
 npm run dev
 ```
 
-### 4. Open in browser
+4. **Open your browser**
 
 ```
 http://localhost:5173/
@@ -162,67 +96,28 @@ http://localhost:5173/
 
 ---
 
-## 🎯 Key Design Decisions
+## 📂 Folder Structure Approach
 
-* **Simplicity First**
-
-  * Focused on clean UI instead of over-complication
-
-* **Component-Based Architecture**
-
-  * Reusable and modular components
-
-* **Separation of Concerns**
-
-  * UI and state logic are separated
-
-* **Scalable Structure**
-
-  * Easy to extend (charts, APIs, authentication)
+```
+src/
+├── components/          
+│   ├── DashboardOverview.jsx  
+│   └── Transactions.jsx       
+├── store/               
+│   └── useStore.js      
+├── App.jsx              
+├── index.css            
+└── main.jsx             
+```
 
 ---
 
-## 🧪 Edge Case Handling
+## 📝 Evaluation Notes
 
-* No transactions → Shows empty state
-* Search with no results → Graceful message
-* Data persistence prevents loss on refresh
-
----
-
-## 🌟 Possible Improvements
-
-* Add charts using **Recharts**
-* Add transaction modal (Admin)
-* Add dark mode toggle
-* Add category filters
-* Connect to backend API
+* **Modularity:** UI components are broken down logically.
+* **State:** Global state is isolated in a Zustand store, keeping components clean and focused purely on rendering.
+* **Empty States:** The dashboard handles empty transaction data gracefully, updating charts and tables to reflect empty states without breaking.
 
 ---
 
-## 📝 Evaluation Highlights
-
-* ✔ Clean and intuitive UI
-* ✔ Responsive layout
-* ✔ Functional features implemented
-* ✔ State managed efficiently
-* ✔ Well-structured codebase
-* ✔ Ready for scaling
-
----
-
-## 👨‍💻 Author
-
-**Aaditya Sattawan**
-
----
-
-## 📌 Note
-
-This project is built for evaluation purposes and focuses on demonstrating:
-
-* Problem-solving approach
-* UI/UX thinking
-* Frontend development skills
-
----
+Would you like me to guide you through deploying this project for free on Vercel so you can replace the "Live Demo" placeholder with a real link?
