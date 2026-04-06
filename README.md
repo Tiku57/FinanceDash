@@ -120,21 +120,11 @@ This project demonstrates strong fundamentals in **UI design, state management, 
 src/
 │
 ├── components/
-│   ├── SummaryCard.jsx
-│   ├── TransactionTable.jsx
-│   ├── Filters.jsx
-│   ├── RoleSwitcher.jsx
-│   ├── Insights.jsx
-│   └── Charts.jsx
+│   ├── Transaction.jsx
+│   └── DashboardOverview.jsx
 │
-├── context/
-│   └── AppContext.jsx
-│
-├── data/
-│   └── mockData.js
-│
-├── pages/
-│   └── Dashboard.jsx
+├── store/
+│   └── useStore.js
 │
 ├── App.jsx
 ├── main.jsx
