@@ -120,4 +120,6 @@ src/
 
 ---
 
-Would you like me to guide you through deploying this project for free on Vercel so you can replace the "Live Demo" placeholder with a real link?
+## 👨‍💻 Author
+
+Created by Aaditya Sattawan
