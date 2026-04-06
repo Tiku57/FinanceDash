@@ -212,12 +212,12 @@ http://localhost:5173/
 
 ## 📝 Evaluation Highlights
 
-✔ Clean and intuitive UI
-✔ Responsive layout
-✔ Functional features implemented
-✔ State managed efficiently
-✔ Well-structured codebase
-✔ Ready for scaling
+* ✔ Clean and intuitive UI
+* ✔ Responsive layout
+* ✔ Functional features implemented
+* ✔ State managed efficiently
+* ✔ Well-structured codebase
+* ✔ Ready for scaling
 
 ---
 
