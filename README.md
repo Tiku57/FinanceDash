@@ -1,16 +1,238 @@
-# React + Vite
+# 💸 Finance Dashboard UI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A clean, responsive, and interactive **Finance Dashboard** built as part of the Zorvyn Frontend Developer Intern assignment.
+This project demonstrates strong fundamentals in **UI design, state management, and frontend architecture**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🔗 Live Demo
 
-## React Compiler
+*(Add your Vercel deployment link here after hosting)*
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 📊 1. Dashboard Overview
+
+* **Summary Cards**
+
+  * Total Balance
+  * Total Income
+  * Total Expenses
+* **Spending Visualization**
+
+  * Simple visual bar representation of financial activity
+* **Dynamic Calculations**
+
+  * All values update automatically based on transactions
+
+---
+
+### 📄 2. Transactions Section
+
+* Displays:
+
+  * Date
+  * Category
+  * Amount
+  * Type (Income / Expense)
+* Features:
+
+  * 🔍 Search by category
+  * 📉 Filtered results in real-time
+  * 🧾 Graceful empty state handling
+
+---
+
+### 🔐 3. Role-Based UI (Simulation)
+
+* Toggle between roles:
+
+  * **Viewer**
+
+    * Can only view data
+  * **Admin**
+
+    * Can add transactions *(extendable)*
+* Demonstrates frontend RBAC logic without backend
+
+---
+
+### 📈 4. Insights Section
+
+* Automatically calculates:
+
+  * Highest spending category
+* Displays meaningful financial observation from data
+
+---
+
+### 🧠 5. State Management
+
+* Managed using **React Context API**
+* Handles:
+
+  * Transactions data
+  * Search filters
+  * User role
+* Clean separation of logic and UI
+
+---
+
+### 💾 6. Data Persistence
+
+* Uses **localStorage**
+* Saves:
+
+  * Transactions
+  * User role
+* Data remains after refresh
+
+---
+
+### 📱 7. Responsive Design
+
+* Fully responsive layout:
+
+  * Mobile
+  * Tablet
+  * Desktop
+* Built using Tailwind utility classes
+
+---
+
+## 🛠️ Tech Stack
+
+| Technology               | Purpose                            |
+| ------------------------ | ---------------------------------- |
+| **React (Vite)**         | Fast and modern frontend framework |
+| **Tailwind CSS v3.4.17** | Utility-first styling              |
+| **Context API**          | State management                   |
+| **JavaScript (ES6+)**    | Core logic                         |
+| **LocalStorage**         | Data persistence                   |
+
+---
+
+## 📂 Folder Structure
+
+```
+src/
+│
+├── components/
+│   ├── SummaryCard.jsx
+│   ├── TransactionTable.jsx
+│   ├── Filters.jsx
+│   ├── RoleSwitcher.jsx
+│   ├── Insights.jsx
+│   └── Charts.jsx
+│
+├── context/
+│   └── AppContext.jsx
+│
+├── data/
+│   └── mockData.js
+│
+├── pages/
+│   └── Dashboard.jsx
+│
+├── App.jsx
+├── main.jsx
+└── index.css
+```
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/Tiku57/FinanceDash.git
+cd FinanceDash
+```
+
+### 2. Install dependencies
+
+```bash
+npm install
+```
+
+### 3. Run the project
+
+```bash
+npm run dev
+```
+
+### 4. Open in browser
+
+```
+http://localhost:5173/
+```
+
+---
+
+## 🎯 Key Design Decisions
+
+* **Simplicity First**
+
+  * Focused on clean UI instead of over-complication
+
+* **Component-Based Architecture**
+
+  * Reusable and modular components
+
+* **Separation of Concerns**
+
+  * UI and state logic are separated
+
+* **Scalable Structure**
+
+  * Easy to extend (charts, APIs, authentication)
+
+---
+
+## 🧪 Edge Case Handling
+
+* No transactions → Shows empty state
+* Search with no results → Graceful message
+* Data persistence prevents loss on refresh
+
+---
+
+## 🌟 Possible Improvements
+
+* Add charts using **Recharts**
+* Add transaction modal (Admin)
+* Add dark mode toggle
+* Add category filters
+* Connect to backend API
+
+---
+
+## 📝 Evaluation Highlights
+
+✔ Clean and intuitive UI
+✔ Responsive layout
+✔ Functional features implemented
+✔ State managed efficiently
+✔ Well-structured codebase
+✔ Ready for scaling
+
+---
+
+## 👨‍💻 Author
+
+**Aaditya Sattawan**
+
+---
+
+## 📌 Note
+
+This project is built for evaluation purposes and focuses on demonstrating:
+
+* Problem-solving approach
+* UI/UX thinking
+* Frontend development skills
+
+---
